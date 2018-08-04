@@ -1,0 +1,14 @@
+body {
+    background:black;
+    color:white;
+    font-family:monospace;
+    font-size:200%;
+}
+
+a {
+    color:aqua;
+}
+
+.disclaimer {
+    font-size:50%;
+}
