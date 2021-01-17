@@ -1,5 +1,8 @@
 <!doctype html>
-
+<!--
+Uh, hi there,
+ehmm, im not a web dev, u may want to look elsewhere into the source code? its just googled together
+-->
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -19,8 +22,16 @@
             font-size: 170%;
         }
 
+        a:any-link {
+            color: aqua;
+        }
+
         #fullpage, h1 {
             margin-left: 2%;
+        }
+
+        p {
+            padding-right: 5%;
         }
 
         @keyframes heading-animation {
@@ -31,9 +42,63 @@
                 opacity: 100;
             }
         }
+
         #heading {
             font-family: Audiowide, cursive;
             font-size: 250%;
+        }
+
+        #code {
+            display: flex;
+        }
+
+        .code-left-column {
+            flex: 25%;
+            text-align: center;
+        }
+
+        .code-right-column {
+            flex: 75%;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: 5px;
+            height: 70%;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-item-1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+
+        .gallery-item-2 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 5;
+        }
+
+        .gallery-item-3 {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+
+        .contact-list {
+            list-style-type: none;
+            margin-bottom: 10%;
         }
 
     </style>
@@ -48,24 +113,79 @@
         <p>I'm coding and taking photos, both more or less useful, both more or less experimental.</p>
         <p>Scroll down and have a look!</p>
     </div>
-    <div class="section" id="second">
-        <p>May take a look at my <a href="https://gitlab.com/quanten">gitlab</a> or <a
-                href="https://github.com/quantenprojects">github</a> profile.</p>
+    <div class="section">
+        <div id="code">
+            <div class="column code-left-column">
+                <div>
+                    <a href="https://github.com/quantenprojects">
+                    <img href="https://github.com/quantenprojects" src="res/github.png" width="120" alt="github octocat logo">
+                    <br>
+                    quantenprojects
+                    </a>
+                </div>
+                <br>
+                <div>
+                    <a href="https://gitlab.com/quanten">
+                        <img src="res/gitlab.svg" width="120" alt="gitlab logo">
+                        <br>
+                        quanten
+                    </a>
+                </div>
+            </div>
+            <div class="column code-right-column">
+                <ul>
+                    <li><a href="https://github.com/aerospaceresearch/gcp-osm">osm.to</a> - QR-Codes as Ground Control Points</li>
+                    <li><a href="https://github.com/quantenProjects/news">random-newspage</a> - Unsure which news to read? read a random one!</li>
+                    <li><a href="https://github.com/quantenProjects/Cube-Animator-RGB">Cube-Animator-RGB</a> - Make animations for a RGB LED cube</li>
+                    <li><a href="https://gitlab.com/quanten/thingstream-click-python">Thingstream Click Python</a> - Python module for the IoT-Click</li>
+                    <li><a href="https://gitlab.com/quanten/goldman-dna">Goldman DNA</a> - Store data in DNA strands</li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div class="section" id="photo">
-        <p> Or at some <a href="https://entanglement.quanten.io/">quantum art</a></p>
+        <!--<p> Or at some <a href="https://entanglement.quanten.io/">quantum art</a></p>-->
+        <p>
+            Have a look at my blog for more photos:
+            <br>
+            <a href="https://quantenbitspixels.wordpress.com/">https://quantenbitspixels.wordpress.com/</a>
+        </p>
+        <div class="gallery">
+            <figure class="gallery-item gallery-item-1">
+                <img src="res/muecke.jpg" class="gallery-img" alt="macro photo">
+            </figure>
+            <!--
+            <figure class="gallery-item gallery-item-2">
+                <img src="res/wanze.jpg" class="gallery-img" alt="macro photo">
+            </figure>
+            -->
+            <figure class="gallery-item gallery-item-3">
+               <img src="res/bread.jpg" class="gallery-img" alt="picture of bread (yes, i'm german)">
+            </figure>
+        </div>
     </div>
     <div class="section" id="last">
+        <div>
+            <p>
+                Contact me:
+            </p>
+            <ul class="contact-list">
+                <li><img src="res/twitter.svg" width="35em" alt="twitter logo"> <a href="https://twitter.com/quintusquanten">@quintusquanten</a></li>
+            </ul>
+        </div>
         <p>That's all</p>
         <div class="disclaimer">
-            This site doesn't use cookies, althrough they are delicious. Also no external resources are loaded. This
-            site is hosted on github pages, so maybe your site visit will recorded by them.
+            <p>
+                This site doesn't use cookies, althrough they are delicious. Also no external resources are loaded. This
+                site is hosted on github pages, so maybe your site visit will recorded by them.
+            </p>
         </div>
     </div>
 </div>
 <script type="application/javascript">
     const fonts = ["Audiowide, cursive", "Robot Mono, monospace", "Caveat, cursive", "Courier Prime, monospace"];
     new fullpage('#fullpage', {
+        anchors: ["1","2","3","4"],
         onLeave: function (origin, destination, direction) {
             font_family_start = fonts[origin.index];
             font_family_end = fonts[destination.index];
