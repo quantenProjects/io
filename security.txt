@@ -3,4 +3,4 @@ Contact: https://chaos.social/@quanten
 Contact: https://twitter.com/quintusquanten
 Expires: 2022-09-30T00:00:00.000Z
 Preferred-Languages: de,en
-Canonical: https://quanten.io/.well-known/security.txt
+Canonical: https://quanten.io/security.txt
