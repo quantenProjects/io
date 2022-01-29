@@ -12,9 +12,45 @@ ehmm, im not a web dev, u may want to look elsewhere into the source code? its j
     <meta name="author" content="quanten">
 
     <link rel="stylesheet" href="fullPage.js/src/fullpage.css">
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Caveat:wght@700&family=Courier+Prime:wght@700&family=Roboto+Mono:wght@700&display=swap"
-          rel="stylesheet">
     <style>
+        /* from https://google-webfonts-helper.herokuapp.com/fonts */
+        /* audiowide-regular - latin */
+        @font-face {
+          font-family: 'Audiowide';
+          font-style: normal;
+          font-weight: 400;
+          src: local(''),
+               url('../fonts/audiowide-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+               url('../fonts/audiowide-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+        /* caveat-brush-regular - latin */
+        @font-face {
+          font-family: 'Caveat Brush';
+          font-style: normal;
+          font-weight: 400;
+          src: local(''),
+               url('../fonts/caveat-brush-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+               url('../fonts/caveat-brush-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+        /* courier-prime-regular - latin */
+        @font-face {
+          font-family: 'Courier Prime';
+          font-style: normal;
+          font-weight: 400;
+          src: local(''),
+               url('../fonts/courier-prime-v5-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+               url('../fonts/courier-prime-v5-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+        /* roboto-mono-regular - latin */
+        @font-face {
+          font-family: 'Roboto Mono';
+          font-style: normal;
+          font-weight: 400;
+          src: local(''),
+               url('../fonts/roboto-mono-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+               url('../fonts/roboto-mono-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+
         body {
             background-color: black;
             color: lightgrey;
@@ -178,13 +214,13 @@ ehmm, im not a web dev, u may want to look elsewhere into the source code? its j
         <div class="disclaimer">
             <p>
                 This site doesn't use cookies, althrough they are delicious. This
-                site is hosted on github pages and uses google fonts, so maybe your site visit will recorded by them.
+                site is hosted on github pages, so maybe your site visit will recorded by them.
             </p>
         </div>
     </div>
 </div>
 <script type="application/javascript">
-    const fonts = ["Audiowide, cursive", "Robot Mono, monospace", "Caveat, cursive", "Courier Prime, monospace"];
+    const fonts = ["Audiowide, cursive", "Robot Mono, monospace", "Caveat Brush, cursive", "Courier Prime, monospace"];
     new fullpage('#fullpage', {
         licenseKey: 'FF12CF90-641E4572-90F0454A-21C4A507',
         anchors: ["1","2","3","4"],
